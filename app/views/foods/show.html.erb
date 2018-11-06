@@ -1,0 +1,67 @@
+#Eric Laroche
+# show indvidual food page
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ref date:</strong>
+  <%= @food.REF_DATE %>
+</p>
+
+<p>
+  <strong>Geo:</strong>
+  <%= @food.GEO %>
+</p>
+
+<p>
+  <strong>Dguid:</strong>
+  <%= @food.DGUID %>
+</p>
+
+<p>
+  <strong>Foodcategories:</strong>
+  <%= @food.Foodcategories %>
+</p>
+
+<p>
+  <strong>Commodity:</strong>
+  <%= @food.Commodity %>
+</p>
+
+<p>
+  <strong>Uom:</strong>
+  <%= @food.UOM %>
+</p>
+
+<p>
+  <strong>Uom id:</strong>
+  <%= @food.UOM_ID %>
+</p>
+
+<p>
+  <strong>Scalar factor:</strong>
+  <%= @food.SCALAR_FACTOR %>
+</p>
+
+<p>
+  <strong>Scalar id:</strong>
+  <%= @food.SCALAR_ID %>
+</p>
+
+<p>
+  <strong>Vector:</strong>
+  <%= @food.VECTOR %>
+</p>
+
+<p>
+  <strong>Coordinate:</strong>
+  <%= @food.COORDINATE %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @food.VALUE %>
+</p>
+
+<%= link_to 'Edit', edit_food_path(@food) %> |
+<%= link_to 'Back', foods_path %>

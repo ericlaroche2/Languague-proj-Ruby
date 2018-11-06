@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  REF_DATE: MyString
+  GEO: MyString
+  DGUID: MyString
+  Foodcategories: MyString
+  Commodity: MyString
+  UOM: MyString
+  UOM_ID: MyString
+  SCALAR_FACTOR: MyString
+  SCALAR_ID: MyString
+  VECTOR: MyString
+  COORDINATE: MyString
+  VALUE: MyString
+
+two:
+  REF_DATE: MyString
+  GEO: MyString
+  DGUID: MyString
+  Foodcategories: MyString
+  Commodity: MyString
+  UOM: MyString
+  UOM_ID: MyString
+  SCALAR_FACTOR: MyString
+  SCALAR_ID: MyString
+  VECTOR: MyString
+  COORDINATE: MyString
+  VALUE: MyString

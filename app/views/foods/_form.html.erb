@@ -1,0 +1,79 @@
+#Eric Laroche
+# Create new food form
+<%= form_with(model: food, local: true) do |form| %>
+  <% if food.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(food.errors.count, "error") %> prohibited this food from being saved:</h2>
+
+      <ul>
+      <% food.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :REF_DATE %>
+    <%= form.text_field :REF_DATE %>
+  </div>
+
+  <div class="field">
+    <%= form.label :GEO %>
+    <%= form.text_field :GEO %>
+  </div>
+
+  <div class="field">
+    <%= form.label :DGUID %>
+    <%= form.text_field :DGUID %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Foodcategories %>
+    <%= form.text_field :Foodcategories %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Commodity %>
+    <%= form.text_field :Commodity %>
+  </div>
+
+  <div class="field">
+    <%= form.label :UOM %>
+    <%= form.text_field :UOM %>
+  </div>
+
+  <div class="field">
+    <%= form.label :UOM_ID %>
+    <%= form.text_field :UOM_ID %>
+  </div>
+
+  <div class="field">
+    <%= form.label :SCALAR_FACTOR %>
+    <%= form.text_field :SCALAR_FACTOR %>
+  </div>
+
+  <div class="field">
+    <%= form.label :SCALAR_ID %>
+    <%= form.text_field :SCALAR_ID %>
+  </div>
+
+  <div class="field">
+    <%= form.label :VECTOR %>
+    <%= form.text_field :VECTOR %>
+  </div>
+
+  <div class="field">
+    <%= form.label :COORDINATE %>
+    <%= form.text_field :COORDINATE %>
+  </div>
+
+  <div class="field">
+    <%= form.label :VALUE %>
+    <%= form.text_field :VALUE %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

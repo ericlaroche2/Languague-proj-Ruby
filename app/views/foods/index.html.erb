@@ -1,0 +1,53 @@
+#Eric Laroche
+#/foods
+#list all rows of db
+
+<p id="notice"><%= notice %></p>
+
+<h1>Foods</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ref date</th>
+      <th>Geo</th>
+      <th>Dguid</th>
+      <th>Foodcategories</th>
+      <th>Commodity</th>
+      <th>Uom</th>
+      <th>Uom id</th>
+      <th>Scalar factor</th>
+      <th>Scalar id</th>
+      <th>Vector</th>
+      <th>Coordinate</th>
+      <th>Value</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @foods.each do |food| %>
+      <tr>
+        <td><%= food.REF_DATE %></td>
+        <td><%= food.GEO %></td>
+        <td><%= food.DGUID %></td>
+        <td><%= food.Foodcategories %></td>
+        <td><%= food.Commodity %></td>
+        <td><%= food.UOM %></td>
+        <td><%= food.UOM_ID %></td>
+        <td><%= food.SCALAR_FACTOR %></td>
+        <td><%= food.SCALAR_ID %></td>
+        <td><%= food.VECTOR %></td>
+        <td><%= food.COORDINATE %></td>
+        <td><%= food.VALUE %></td>
+        <td><%= link_to 'Show', food %></td>
+        <td><%= link_to 'Edit', edit_food_path(food) %></td>
+        <td><%= link_to 'Destroy', food, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Food', new_food_path %>
