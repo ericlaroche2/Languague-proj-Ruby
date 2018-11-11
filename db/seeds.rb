@@ -4,15 +4,17 @@
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
 # Examples:
-#
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
 #bundle exec rake db:seed
 require 'csv'
+$i = 0
 
 CSV.foreach(Rails.root.join('lib', 'seeds', 'foods.csv'), headers: true) do |row|
+
   Food.create! do |food|
+    food.ROW_ID = $i
     food.REF_DATE = row[0]
     food.GEO = row[1]
     food.DGUID = row[2]
@@ -25,5 +27,6 @@ CSV.foreach(Rails.root.join('lib', 'seeds', 'foods.csv'), headers: true) do |row
     food.VECTOR = row[9]
     food.COORDINATE = row[10]
     food.VALUE = row[11]
+    $i += 1 ;
   end
 end

@@ -9,6 +9,7 @@
 <table>
   <thead>
     <tr>
+      <th>ROW_ID</th>
       <th>Ref date</th>
       <th>Geo</th>
       <th>Dguid</th>
@@ -28,6 +29,7 @@
   <tbody>
     <% @foods.each do |food| %>
       <tr>
+        <td><%= food.id %></td>
         <td><%= food.REF_DATE %></td>
         <td><%= food.GEO %></td>
         <td><%= food.DGUID %></td>

@@ -1,6 +1,7 @@
 class CreateFoods < ActiveRecord::Migration[5.2]
   def change
     create_table :foods do |t|
+      t.string :ROW_ID
       t.string :REF_DATE
       t.string :GEO
       t.string :DGUID
@@ -13,7 +14,6 @@ class CreateFoods < ActiveRecord::Migration[5.2]
       t.string :VECTOR
       t.string :COORDINATE
       t.string :VALUE
-
       t.timestamps
     end
   end

@@ -13,6 +13,7 @@
 ActiveRecord::Schema.define(version: 2018_10_27_045948) do
 
   create_table "foods", force: :cascade do |t|
+    t.string "ROW_ID"
     t.string "REF_DATE"
     t.string "GEO"
     t.string "DGUID"
